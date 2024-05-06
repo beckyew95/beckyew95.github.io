@@ -3,11 +3,289 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 
 <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheatsheet</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
 
 <body>
-  <h1>Becky Wright</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+<!-- Navigation Bar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href= #main-html>HTML Information</a></li>
+            <li><a href= #html-semantic>Semantic HTML</a></li>
+            <li><a href= #html-visuals>Adding Visuals to HTML</a></li>
+            <li><a href= #main-css>CSS Information</a></li>
+            <li><a href= #pseudo>Pseudo-Class Selectors in CSS</a></li>
+            <li><a href= #box-model>CSS Boxes</a></li>
+            <li><a href= #position>Positioning in CSS</a></li>
+            <li><a href= #keyboard-shortcuts>Keyboard Shortcuts</a></li>
+        </ul>
+    </nav>
+<!-- Website Heading -->
+<hr id="header-hr"/>
+    <header>
+        <h1>Cheatsheet</h1>
+        <h2>HTML and CSS</h2>
+    </header>
+<!-- HTML Section -->
+<hr/>
+<section id="main-html">
+    <h3 class="html">
+        HTML
+    </h3>
+    <p class="html">Html stands for Hypertext Markup Language, it is responsible for the structure of a websites content. </p>
+    <img src="./images/html-image.PNG" alt="logo for html">
+    <br/>
+<!-- Semantic HTML -->
+        <div id="html-semantic">
+        <h4>Semantic HTML</h4>
+        <p>Semantic elements provide information about the content between the opening and closing tags. 
+            This helps tell other developers, search engines and devices for people with disabilities what the content is, which in turn helps them read the page more clearly.
+           <br/>Examples of non-semantic tags are &ltdiv&gt and &lt/span&gt.</p>
+            <aside>Note: how to show html code characters as text.(Look up htmlspecialchars)
+                <br/>
+                <br/> Some examples are:
+                <ul>
+                    <li> <strong>&amp</strong> (Ampersand) typed as &-a-m-p</li>
+                    <li> <strong>&quot</strong> (Double Quotes) typed as &-q-u-o-t (when ENT_NOQUOTES is not set)</li>
+                    <li> <strong>&lt</strong> (Less Than) typed as &-l-t</li>
+                    <li> <strong>&gt</strong> (Greater Than) typed as &-g-t</li>
+                </ul>
+            </aside>
+        <table class="html-table">
+            <caption>Examples of Semantic HTML</caption>
+            <thead>
+            <tr>
+                <th scope="col">Tag</th>
+                <th scope="col">Definition</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>&ltheader&gt</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>&ltfooter&gt</td>
+                <td></td>
+            </tr>
+                <td>&ltmain&gt</td>
+                <td></td>
+            </tr>
+                <td>&ltsection&gt</td>
+                <td></td>
+            </tr>
+                <td>&ltnav&gt</td>
+                <td></td>
+            </tr>
+                <td>&ltarticle&gt</td>
+                <td></td>
+            </tr>
+                <td>&ltaside&gt</td>
+                <td></td>
+            </tr>
+                <td>&ltfigure&gt</td>
+                <td></td>
+            </tr>
+                <td>&ltfigcaption&gt</td>
+                <td>Will ensure the caption stays with the relavant image within the figure.</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+        <br/>
+<!-- Adding Visuals to HTML -->
+        <div id="html-visuals">
+            <h4>Adding Visuals to HTML</h4>
+            <h5>Images</h5>
+            <p>
+                Use &ltimg src=&quoturl&quot&gt to add an image to an html file. This is a self closing tag.
+                <br/> Add alt=&quotinfo about image&quot, this helpf visually impaired web users to know what the image is of, but will not be visible as text on the browser.
+                <br/> Under the src to add a local file, use &quot./&quot to navigate through project folder and &quot../&quot to back a folder.
+            </p>
+            <h5>Audio</h5>
+            <p>
+                Use &ltaudio&gt to add an audio file, this is not a self closing tag. Can add the source file using &ltsource src=&quoturl&quot type=&quotaudio/mp4&quot&gt.
+                <br/>Use optional attributes in the opening audio tag:
+                <ul>
+                    <li>autoplay = play when webpage opens</li>
+                    <li>controls = to add control buttons to audio</li>
+                </ul>
+            </p>
+            <h5>Video</h5>
+            <p>
+                Use &ltvideo&gt to add a video file, this is not a self closing element. Text added in between opening and closing tag will show if the video is unable to load, recommend adding &quotvideo not supported&quot.
+                <br/>Use optional attributes in the opening audio tag:
+                <ul>
+                    <li>autoplay = play when webpage opens.</li>
+                    <li>controls = to add control buttons to video.</li>
+                    <li>loop = to play video on a continuous loop.</li>
+                </ul>
+            </p>
+            <h5>Gifs</h5>
+            <p>
+                Use &ltembed src=&quoturl&quot&gt to add a gif to an html file, this is the old method for adding all audio/video files, however above specific methods are now preferred for those files.
+            </p>
+        </div>
+        <br/>
+<!-- HTML Help Websites -->
+        <div class="helpful-links">
+            <h4 id="html-links">HTML Helpful Webpages</h4>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN Helpful Elements</a>
+                <a href="https://www.codecademy.com/resources/docs/html" target="_blank">Codecademy HTML Help</a>
+        </div>
+
+</section>
+
+<!-- CSS Section -->
+<hr/>
+<section id="main-css">
+    <h3 class="css">
+        CSS
+    </h3>
+    <p class="css">CSS stands for Cascading Style Sheet, it is responsible for the styling of a websites content. 
+        Link a stylesheet to an html file within the &lthead&gt of the html file using:
+        <br/> &ltlink href=&quotstyle.css&quot ref=&quotstylesheet&quot&gt - this is a self closing tag.
+        <br/>Separating selectors with a space will mean the styling applies to content under both the selectors written, separating selectors with a comma will apply the styling to selectors with either selector.
+        <br/>Styling will be applied to selectors based on specificity, with the styling within the most specific selector being used, unless &quot!important&quot is used to show an important selector as this will override all other styling.
+        <br/>Adding an asterix as the first selector on the stylesheet will add styling for all, set margin:0 and padding:0 to override any defaults set by the user agent (browser).
+    </p>
+    <img src="./images/CSS-image.PNG" alt="logo for css">
+    <br/>
+<!-- Pseudo-Class Selectors -->
+        <div id="pseudo">
+        <h4>Pseudo-Class Selectors</h4>
+        <p>Pseudo-class selectors are keywords that start with a colon (:) and are used to select elements in a specific state.</p>
+        <table>
+            <thead>
+                <tr><th scope="col">Selector</th><th scope="col">Function</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>:focus</td><td>A link that is focused (e.g., moved to by a keyboard user using the Tab key or something similar, or programmatically focused using HTMLElement.focus()</td>
+                </tr>
+                <tr>
+                    <td>:visited</td><td>A link that has already been visited (exists in the browser's history).</td>
+                </tr>
+                <tr>
+                    <td>:disabled</td><td>A link that is no longer active.</td>
+                </tr>
+                <tr>
+                    <td>:active</td><td>A link that is activated (e.g., clicked on).</td>
+                </tr>
+                <tr> 
+                    <td>:hover</td><td>A link that is hovered over by a user's mouse pointer.</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links" target="_blank">Link to helpful MDN Page</a>
+        </div>
+<!-- Box Model -->
+        <div id="box-model">
+            <h4>Box Model</h4>
+            <p>All elements on a web page are interpreted by the browser as being in a box. Aspects of this box can be altered using:
+                <ul>
+                    <li>dimensions; width or height</li>
+                    <li>border</li>
+                    <li>padding</li>
+                    <li>margin; note: horizontal margins will add, but vertical margins will default to the highest value present only.</li>
+                    <li>overflow (what happens when the content exceeds the size of the box)</li>
+                </ul>
+            <br/>
+                <br/>Using margin: 0 auto; this will center an element only if there is a width set for that element.
+            <br/>
+                <br/>Default setting for box-sizing is content box ==&gt overall box dimensions = height + border + padding.
+                <br/>Change to box-sizing=border-box ==&gt overall box dimension = height
+                <br/><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing" target="_blank">Link to helpful MDN Page on Box Sizing</a>
+            <br/>
+                <br/>overflow=hidden; will hide any overflowing content.
+                <br/>overflow=scroll; will add a scrollbar to the box.
+                <br/>overflow=visible; will display overflow content outside of the box, this is the default setting.
+            </p>
+        </div>
+<!-- Positioning -->
+        <div id="position">
+                <h4>Positioning HTML content using CSS</h4>
+                <ul>
+                    <p>The position of the html box can be altered using the below selectors:</p>
+                    <li><strong>position</strong>;
+                        <ul id="position-nested">
+                            <li><em>static</em> (default setting)</li>
+                            <li><em>relative</em>; position relative to parent element, can set top: 50px etc.</li>
+                            <li><em>absolute</em></li>
+                            <li><em>fixed</em>; pinned to a specific spot on the page, similar to freezepane in excel</li>
+                            <li><em>sticky</em></li>
+                        </ul>
+                    </li>
+                    <li><strong>display</strong>; 
+                        <ul id="position-nested">
+                            <li><em>block</em> (take up the full width of their container with line breaks before and after, and can have their height and width manually adjusted),</li>
+                            <li><em>inline</em> (take up as little space as possible, flow horizontally, and cannot have their width or height manually adjusted),</li>
+                            <li><em>inline-block</em> (elements can appear next to each other, and can have their width and height manually adjusted).</li>
+                            </ul> 
+                    </li>
+                    <li><strong>z-index</strong>; sends to front or back to show how elements will stack when overlapping, numberical value.</li>
+                    <li><strong>float</strong>; only works for relative and static positions.</li>
+                    <li><strong>clear</strong>; defines how elements should behave when they bump into eachother.(left, right, both, none)</li>
+                </ul>
+                <br/>
+                <a href="https://www.codecademy.com/learn/learn-css/modules/learn-css-display-positioning/cheatsheet" target="_blank">Link to helpful Codecademy Page on Positioning</a>
+        </div>
+</section>
+
+<!-- Other Notes Section -->
+<hr/>
+<section id="notes">
+    <h3 class="notes">Other Helpful Notes</h3>
+<!-- Keyboard Shortcuts -->
+        <div id="keyboard-shortcuts">
+        <h4>Keyboard Shortcuts</h4>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Keyboard Command</th>
+                <th scope="col" colspan="2">Action Outcome</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td rowspan="2">&quot ctrl &quot + &quot / &quot</td>
+                <td rowspan="2">To type notes into code that will not show on browser.</td>
+                <td>Will show in html as &lt-- text --&gt</td>
+            </tr>
+            <tr><td>Will show in CSS as /* text */</td></tr>
+
+            <tr>
+                <td> &quot shift &quot + &quot 1 &quot + &quot tab &quot</td>
+                <td colspan="2">To bring up info needed when starting an html file.</td>
+            </tr>
+
+            <tr> 
+                <td>&quot ctrl &quot + &quot shift &quot + &quot c &quot</td>
+                <td colspan="2">Works the same as right click-&gtinspect to show the metrics pane on a webpage</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+<!-- Useful Links -->
+        <div class="helpful-links" id="other-links">
+        <h4>Useful Links</h4>
+            <h5>Colours</h5>
+            <a href="https://colorhunt.co/" target="_blank">Colour Hunt - for colour palette ideas.</a>
+            <h5>Fonts</h5>
+            <a href="https://fonts.google.com/" target="_blank">Google Fonts - to link to fonts or download to use @fontface.</a>
+            <a href="https://fonts.adobe.com/" target="_blank">Adobe Fonts - to link to fonts or download to use @fontface.</a>
+            <a href="https://www.myfonts.com/" target="_blank">MyFonts - for paid for fonts to use @fontface on CSS.</a>
+        </div>
+</section>
+<footer>
+    <span id="footer-name">Created by Becky Wright</span>
+    <span class="footer-text">Based on notes so far made from Codecademy Fullstack course.</span>
+    <span class="date">03.05.2024</span>
+</footer>
 </body>
 
 </html>
